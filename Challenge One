@@ -1,0 +1,24 @@
+#step one
+
+print("=== Challenge 1: Collatz Conjecture ===")
+current_number = int(input("Enter starting number: "))
+step_count = 0
+
+#The following code calculates the sequence of the inputted number (current_number).
+#The amount of steps is how many times it took the loop to run in order to get to the end.
+print("Sequence:", end=' ')
+while current_number > 1:
+    if current_number % 2 == 0:
+        print(f"{int(current_number)}", end=' ')  
+        current_number = current_number / 2
+        step_count = step_count + 1
+    else:
+        print(f"{int(current_number)}", end= ' ')  
+        current_number = (current_number * 3) + 1
+        step_count = step_count + 1
+    continue
+print("1",end=' ')
+
+
+print("Steps:", step_count)
+print()

@@ -1,0 +1,21 @@
+#step three
+print("=== Challenge 3: Multiplication Table ===")
+print("Multiplication Table:")
+row = range(1,11)
+column = range(1,11)
+
+#I used ChatGPT to help me properly format the table header as well as printing out the table (I was
+#originally doing the multiplication in the wrong way).
+
+#This code neatly prints out the multiplication table, which is found by multiplying the row number by
+#the column number.
+print("   ", end="")
+for i in column:
+    print(f"{i:4}", end="")
+print()
+for n in row:
+    print(f"{n:2}", end=" ")
+    for i in column:
+        product = n * i
+        print(f"{product:4}", end="")
+    print()

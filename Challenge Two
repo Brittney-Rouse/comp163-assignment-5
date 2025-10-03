@@ -1,0 +1,21 @@
+#step two
+print("=== Challenge 2: Prime Number Checker ===")
+second_number = int(input("Enter a number: "))
+
+#This if-statement is a special case, as the for loop doesn't account for if the inputted number
+#(second_number) is 2 or not (as the range for the for loop ranges from (2, second_number-1), which
+#won't properly respond to 2, as (2, 1) is not a proper range.
+print(f"Testing divisors from 2 to {second_number - 1}...")
+if second_number == 2:
+    print("2 is prime!")
+
+#This code checks if the inputted number (second_number) is prime or not.
+for n in range(2, second_number - 1):
+    if second_number % 3 == n:
+        print(f"{second_number} is prime!")
+        break
+    elif second_number % 3 != n:
+        print(f"{second_number} is not prime (divisible by 3)")
+        break
+
+print()
